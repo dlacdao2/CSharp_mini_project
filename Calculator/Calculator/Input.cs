@@ -8,7 +8,7 @@ namespace Calculator
 {
     public class Input
     {
-        List<string> list = new List<string>();
+        List<object> list = new List<object>();
 
         public void gettingInput()
         {
@@ -24,6 +24,10 @@ namespace Calculator
                     {
                         Console.WriteLine(element);
                     }
+                    
+                    Functions valuecalculator = new Functions();
+                    valuecalculator.calculateTotalValue(list);
+
                     Console.WriteLine("this loop is ended");
                     // break;
                 }
